@@ -5,7 +5,7 @@ Bienvenue dans l'univers captivant de WeatherLinkSystem, un projet météorologi
 
 ## 🏫 À Propos de l'INSSET Saint-Quentin
 
-L'INSSET (Institut Supérieur des Sciences, de l'Enseignement et de la Technologie) Saint-Quentin est un institut située dans la charmante ville de Saint-Quentin, en France. Affiliée à l'Université de Picardie Jules Verne, l'INSSET propose des formations dans des domaines variés, allant de la mécanique à l'informatique en passant par le génie électrique.
+L'INSSET (Institut Supérieur des Sciences, de l'Enseignement et de la Technologie) Saint-Quentin est un institut situé dans la charmante ville de Saint-Quentin, en France. Affiliée à l'Université de Picardie Jules Verne, l'INSSET propose des formations dans des domaines variés, allant de la mécanique à l'informatique en passant par le génie électrique.
 [![Logo](https://i.ibb.co/58wMW5K/INSSET-logo-RVB.png)](http://www.insset.u-picardie.fr/)
 ## 🚀 Objectif du Projet
 
@@ -25,7 +25,7 @@ Notre mission ? Concevoir une station météo intelligente et accessible à tous
 - [@GrosChien](https://github.com/GrosChien) (Eliot)
 - Mr. Pierens Xavier (superviseur du projet)
 ## 📃 Documentation
-Vous pourez retrouvez la courte documentation du projet ici :
+Vous pourrez retrouvez la courte documentation du projet ici :
 [Documentation](https://github.com/LordYoni/WeatherLinkSystem/tree/main/documentation)
 
 
