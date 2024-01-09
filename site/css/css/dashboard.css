@@ -1,0 +1,319 @@
+body {
+    background: #213640;
+    font-family: 'Oddval Variable', sans-serif;
+    font-variation-settings: "wght" 500, "ital" 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+p{
+    font-family: 'Oddval Variable', sans-serif;
+    font-variation-settings: "wght" 500, "ital" 1;
+}
+
+.conteneur-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .conteneur-dashboard {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    body {
+        background: #E5D3FE;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow: auto;
+}
+
+.carte-dashboard {
+    background-color: rgba(255, 255, 255, 0.99);
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.carte-dashboard:hover{
+    transform: scale(1.01);
+}
+
+.carte-dashboard a,
+.carte-dashboard a h2,
+.carte-dashboard a p {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+.big-card{
+    grid-column: 1/5;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+
+}
+
+.custom-button {
+    margin: 20px;
+    padding-left: 20px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.chart {
+    width: 100%;
+    max-width: 600px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: 0 auto; /* Centre le graphique sur la page */
+}
+
+/* Style spécifique pour le graphique de température */
+#graphique_temp {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h2 {
+    color: #3498db;
+    font-variation-settings: "wght" 700, "ital" 0;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#graphique{
+    width: 100%;
+    height: 75%;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 100%;
+    background-color: #274B58;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+
+.mon-svg {
+    padding: 20px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.mon-svg:hover {
+    fill: #f1f1f1;
+}
+
+#sidebar a:hover .mon-svg{
+    fill: #f1f1f1;
+}
+
+#sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    transition: 0.3s;
+    padding-top: 15%;
+}
+
+
+#sidebar a span {
+    display: none;
+    padding-left: 10px;
+    vertical-align: middle; /* Alignement vertical au milieu */
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+body.expanded #sidebar a span {
+    display: inline;
+}
+
+body.expanded #sidebar {
+    width: 15%;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    transition: background 0.2s;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+button:is(:hover, :focus-visible) {
+    background: hsl(0 0% 98%);
+}
+
+button:is(:focus-visible) {
+    outline-color: hsl(320 80% 50% / 0.5);
+    outline-offset: 1rem;
+    outline-width: 4px;
+}
+
+button svg:first-of-type {
+    width: 65%;
+}
+
+button rect {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    fill: hsl(0 0% 16%);
+}
+.unset rect {
+    transform-box: unset;
+}
+[aria-pressed=true] rect {
+    transition: translate 0.2s, rotate 0.2s 0.3s;
+}
+rect {
+    transition: rotate 0.2s 0s, translate 0.2s 0.2s;
+}
+
+[aria-pressed=true] rect:nth-of-type(1) {
+    translate: 0 333%;
+    rotate: -45deg;
+}
+[aria-pressed=true] rect:nth-of-type(2) {
+    rotate: 45deg;
+}
+[aria-pressed=true] rect:nth-of-type(3) {
+    translate: 0 -333%;
+    rotate: 45deg;
+}
+[aria-pressed=true] svg {
+    rotate: 90deg;
+    transition: rotate 1s 0.4s;
+}
+
+@supports (--custom: linear()) {
+    :root {
+        --elastic-out: linear(
+                0, 0.2178 2.1%, 1.1144 8.49%,
+                1.2959 10.7%, 1.3463 11.81%,
+                1.3705 12.94%, 1.3726, 1.3643 14.48%,
+                1.3151 16.2%, 1.0317 21.81%,
+                0.941 24.01%, 0.8912 25.91%,
+                0.8694 27.84%, 0.8698 29.21%,
+                0.8824 30.71%, 1.0122 38.33%, 1.0357,
+                1.046 42.71%, 1.0416 45.7%,
+                0.9961 53.26%, 0.9839 57.54%,
+                0.9853 60.71%, 1.0012 68.14%,
+                1.0056 72.24%, 0.9981 86.66%, 1
+        );
+        --elastic-in-out: linear(
+                0, 0.0009 8.51%, -0.0047 19.22%,
+                0.0016 22.39%, 0.023 27.81%,
+                0.0237 30.08%, 0.0144 31.81%,
+                -0.0051 33.48%, -0.1116 39.25%,
+                -0.1181 40.59%, -0.1058 41.79%, -0.0455,
+                0.0701 45.34%, 0.9702 55.19%,
+                1.0696 56.97%, 1.0987 57.88%,
+                1.1146 58.82%, 1.1181 59.83%,
+                1.1092 60.95%, 1.0057 66.48%,
+                0.986 68.14%, 0.9765 69.84%,
+                0.9769 72.16%, 0.9984 77.61%,
+                1.0047 80.79%, 0.9991 91.48%, 1
+        );
+    }
+    [aria-pressed=true] svg {
+        transition-timing-function: var(--elastic-out);
+    }
+}
+
+.controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 1rem;
+    color: hsl(0 0% 98%);
+    accent-color: hsl(0 0% 100%);
+}
+
+#vent2,
+#tout,
+#pluie2,
+#temp2,
+#uv2,
+#vis2 {
+    display: none;
+}
+
+#tout:target,
+#vent2:target,
+#pluie2:target,
+#temp2:target,
+#uv2:target,
+#vis2:target {
+    display: block;
+}
+
+#tout:target .tout{
+    background: gray;
+    border-radius: 8px;
+}
+
