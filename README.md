@@ -50,7 +50,7 @@ Installez Apache2 :
   sudo apt install apache2
 ```
 
-vous assurez-vous que l'utilisateur "admin" possède les droits sur le dossier HTML :
+Vous assurez-vous que l'utilisateur "admin" possède les droits sur le dossier HTML :
 ```bash
   sudo chown -R admin /var/www/html
 ```
@@ -75,7 +75,6 @@ Configurez l'accès à MySQL :
 Entrez le mot de passe root MySQL :
 ```bash
   GRANT ALL PRIVILEGES ON *.* TO 'adminSQL'@'localhost' IDENTIFIED BY 'StationSQL' WITH   GRANT OPTION;
-  quit
 ```
 
 Ajoutez la configuration pour PHPMyAdmin à Apache :
