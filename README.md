@@ -74,7 +74,7 @@ Configurez l'accès à MySQL :
 ```
 Entrez le mot de passe root MySQL :
 ```bash
-  GRANT ALL PRIVILEGES ON *.* TO 'adminSQL'@'localhost' IDENTIFIED BY 'StationSQL' WITH   GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'adminSQL'@'localhost' IDENTIFIED BY 'StationSQL' WITH   GRANT OPTION;
 ```
 
 Ajoutez la configuration pour PHPMyAdmin à Apache :
