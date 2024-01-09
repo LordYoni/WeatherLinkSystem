@@ -1,7 +1,7 @@
 
 # 🌦️ WeatherLinkSystem 🌐
 
-Bienvenue dans l'univers passionnant de WeatherLinkSystem, un projet étudiant qui réunit le meilleur de la technologie pour créer une station météo connectée !
+Bienvenue dans l'univers captivant de WeatherLinkSystem, un projet météorologique élaboré avec passion par des étudiants. WeatherLinkSystem se distingue en tant que système météorologique intégré, alliant un site web interactif, une Raspberry Pi en tant que serveur central et une station météo. Suivez notre projet !
 
 ## 🏫 À Propos de l'INSSET Saint-Quentin
 
