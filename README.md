@@ -18,13 +18,6 @@ Notre mission ? Concevoir une station météo intelligente et accessible à tous
 - **Station Météo  :** Plongez dans le monde de la programmation  en utilisant notre station météo équipée de capteurs pour mesurer divers paramètres.
 
 
-## 📬 Contact
-
-Pour toute question, suggestion, ou simplement pour discuter de météo, n'hésitez pas à nous contacter à taine.yoni@gmail.com
-
-Restez connectés, car WeatherLinkSystem prend forme ! 🌈🛰️⚙️
-
-
 
 ## 👥 Contributeurs
 
@@ -119,6 +112,11 @@ Installez les bibliothèques Python nécessaires :
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+## 📬 Contact
+
+Pour toute question, suggestion, ou simplement pour discuter de météo, n'hésitez pas à nous contacter à taine.yoni@gmail.com
+
+Restez connectés, car WeatherLinkSystem prend forme ! 🌈🛰️⚙️
 
 ## 📝 Licence
 
