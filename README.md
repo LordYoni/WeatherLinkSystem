@@ -28,8 +28,8 @@ Restez connectés, car WeatherLinkSystem prend forme ! 🌈🛰️⚙️
 
 ## 👥 Contributeurs
 
-- [@LordYoni](https://github.com/LordYoni)(Yoni étudiant en première année de Licence Sciences et technologies)
-- [@GrosChien](https://github.com/GrosChien)(Eliot étudiant en première année de Licence Sciences et technologies)
+- [@LordYoni](https://github.com/LordYoni)
+- [@GrosChien](https://github.com/GrosChien) (Eliot)
 - Mr. Pierens Xavier (superviseur du projet)
 ## 📃 Documentation
 Vous pourez retrouvez la courte documentation du projet ici :
