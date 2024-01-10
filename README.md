@@ -1,4 +1,3 @@
-
 # 🌦️ WeatherLinkSystem 🌐
 
 Bienvenue dans l'univers captivant de WeatherLinkSystem, un projet météorologique élaboré avec passion par des étudiants. WeatherLinkSystem se distingue en tant que système météorologique intégré, alliant un site web interactif, une Raspberry Pi en tant que serveur central et une station météo. Suivez notre projet !
