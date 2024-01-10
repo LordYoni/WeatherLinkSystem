@@ -106,12 +106,20 @@ Installez les bibliothèques Python nécessaires :
 
 ## 🔗 Annexe
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Station" alt="Station Screenshot" style="width: 45%; margin-bottom: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Raspberry" alt="Raspberry Screenshot" style="width: 45%; margin-bottom: 10px;">
+</div>
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+[//]: # (![App Screenshot]&#40;https://via.placeholder.com/468x300?text=Site&#41;)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+[//]: # (![App Screenshot]&#40;https://via.placeholder.com/468x300?text=Site&#41;)
 
+[//]: # (![App Screenshot]&#40;https://via.placeholder.com/468x300?text=Station&#41;)
+
+[//]: # (![App Screenshot]&#40;https://via.placeholder.com/468x300?text=Raspberry&#41;)
 ## 📬 Contact
 
 Pour toute question, suggestion, ou simplement pour discuter de météo, n'hésitez pas à nous contacter à taine.yoni@gmail.com
