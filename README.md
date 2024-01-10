@@ -107,10 +107,10 @@ Installez les bibliothèques Python nécessaires :
 ## 🔗 Annexe
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px;">
-  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px;">
-  <img src="https://via.placeholder.com/468x300?text=Station" alt="Station Screenshot" style="width: 45%; margin-bottom: 10px;">
-  <img src="https://via.placeholder.com/468x300?text=Raspberry" alt="Raspberry Screenshot" style="width: 45%; margin-bottom: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px; margin-left: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Site" alt="Site Screenshot" style="width: 45%; margin-bottom: 10px;margin-left: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Station" alt="Station Screenshot" style="width: 45%; margin-bottom: 10px;margin-left: 10px;">
+  <img src="https://via.placeholder.com/468x300?text=Raspberry" alt="Raspberry Screenshot" style="width: 45%; margin-bottom: 10px;margin-left: 10px;">
 </div>
 
 [//]: # (![App Screenshot]&#40;https://via.placeholder.com/468x300?text=Site&#41;)
