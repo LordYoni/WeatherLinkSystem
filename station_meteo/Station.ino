@@ -44,7 +44,6 @@
 
 #include <Arduino.h>
 #include <LiquidCrystal.h>
-#include <Si115X.h>
 
 
 
