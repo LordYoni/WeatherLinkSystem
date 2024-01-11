@@ -68,8 +68,6 @@ def insert_valeur(vent,pluie,temperature,visible,direc,uv):
 
 
 
-
-
 def printval():
     # print("vent entier: " + str(vent_ent))
     # print("vent decimal: " + str(vent_dec))
@@ -215,41 +213,3 @@ while 1:
     elif console: #sert à rien si inp read = 8
         print()
         print("Timeout...     len: " + str(len(rec)))
-
-""" leguacy
-
-no=1 #combient ième trame reçue
-
-while True:
-    serial.flushInput();serial.flushOutput()
-    trame=(serial.readline().decode("utf8", errors="replace"))
-    print("trame " + str(no) + " recue")
-    no=no+1
-    if trame[0]=="d" and trame[-3]=="f":
-
-        stg, ind = separ(1)
-        vent = float(stg)
-
-        stg, ind = separ(ind)
-        pluie = float(stg)
-
-        stg, ind = separ(ind)
-        temperature = float(stg)
-
-        stg, ind = separ(ind)
-        visible = int(stg)
-
-        stg, ind = separ(ind)
-        direc = int(stg)
-
-        stg, ind = separ(ind)
-        uv = int(stg)
-
-        print(vent)
-        print(pluie)
-        print(temperature)
-        print(visible)
-        print(direc)
-        print(uv)
-        insert_valeur(vent,pluie,temperature,visible,direc,uv)
-"""
