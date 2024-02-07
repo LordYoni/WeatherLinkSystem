@@ -1,124 +1,133 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/cloud-server.png">
     <script src="js/jquery-latest.min.js"></script>
     <script src="js/chart.js"></script>
-    <link rel="icon" href="img/icon.png">
-    <title>Dashboard</title>
+    <title>WeatherLinkSystem</title>
 </head>
 <body>
-<div id="sidebar">
-    <button class="custom-bouton">
-        <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="6.25" />
-            <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="11.25" />
-            <rect width="18" height="1.5" fill=red ry="0.75" x="3" y="16.25" />
-        </svg>
-    </button>
-    <a href="#tout" id="svg-tout" class="side-link"><svg class="mon-svg"  height="32" width="36" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg><span>Acceuil</span></a>
-    <a href="#vent2" id="svg-vent" class="side-link"><svg class="mon-svg"  height="32" width="32" viewBox="0 0 512 512"><path d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg><span>Vent</span></a>
-    <a href="#pluie2" id="svg-pluie" class="side-link"><svg class="mon-svg"  height="32" width="24" viewBox="0 0 384 512"><path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/></svg><span>Pluie</span></a>
-    <a href="#uv2" id="svg-uv" class="side-link"><svg class="mon-svg"  height="32" width="32" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg><span>UV</span></a>
-    <a href="#temp2" id="svg-temp" class="side-link"><svg class="mon-svg"  height="32" width="20" viewBox="0 0 320 512"><path d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V144c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"/></svg><span>Température</span></a>
-    <a href="#vis2" id="svg-vis" class="side-link"><svg class="mon-svg"  height="32" width="24" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg><span>Lumière</span></a>
+<div class="dashboard">
+    <div class="sidebar">
+        <p class="titre_sidebar">WeatherLinkSystem</p>
+        <span class="lien home">
+            <a href="#home">
+                <img src="img/house.png" alt="Acceuil">
+                <p>Accueil</p>
+            </a>
+        </span>
+        <span class="lien wind">
+            <a href="#vent2">
+                <img src="img/wind.png" alt="vent">
+                <p>Vent</p>
+            </a>
+        </span>
+        <span class="lien rain">
+            <a href="#pluie2">
+                <img src="img/drop.png" alt="pluie">
+                <p>Pluie</p>
+            </a>
+        </span>
+        <span class="lien uv">
+            <a href="#uv2">
+                <img src="img/sun.png" alt="soleil">
+                <p>UV</p>
+            </a>
+        </span>
+        <span class="lien temp">
+            <a href="#temp2">
+                <img src="img/temperature.png" alt="thermomètre">
+                <p>Température</p>
+            </a>
+        </span>
+        <span class="lien lum">
+            <a href="#lumiere2">
+                <img src="img/idea.png" alt="Lumière">
+                <p>Lumière</p>
+            </a>
+        </span>
+    </div>
+    <section id="home">
+        <div class="boxs">
+            <div class="box box-dashboard">
+                <p class="titres">Vitesse du vent</p>
+                <p class="valeurs" id="vent">5.38 Km/h</p>
+            </div>
+            <div class="box box-dashboard">
+                <p class="titres">Pluviométrie</p>
+                <p class="valeurs" id="pluie">1.6 mm/mm²</p>
+            </div>
+            <div class="box box-dashboard">
+                <p class="titres">Température</p>
+                <p class="valeurs" id="termo">19.3 °C</p>
+
+            </div>
+            <div class="box box-dashboard">
+                <p class="titres">Sens du vent</p>
+                <p class="valeurs" id="ind_vent">Sud-Est</p>
+            </div>
+            <div class="box box-dashboard">
+                <p class="titres">Lumière visible</p>
+                <p class="valeurs" id="vis">70 lumen</p>
+            </div>
+            <div class="box box-dashboard">
+                <p class="titres">Indice UV</p>
+                <p class="valeurs" id="uv">Faible</p>
+            </div>
+        </div>
+    </section>
+    <section id="vent2">
+        <div class="boxs">
+            <div class="box box_graphique chart">
+                <p class="titres_graph">Évolution du Vent</p>
+                <canvas id="graphique_vent" class="graph"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="pluie2">
+        <div class="boxs">
+            <div class="box box_graphique chart">
+                <p class="titres_graph">Évolution de la précipitation</p>
+                <canvas id="graphique_pluie" class="graph"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="temp2">
+        <div class="boxs">
+            <div class="box box_graphique chart">
+                <p class="titres_graph">Évolution de la température</p>
+                <canvas id="graphique_temperature" class="graph"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="lumiere2">
+        <div class="boxs">
+            <div class="box box_graphique chart">
+                <p class="titres_graph">Évolution de la lumière visible</p>
+                <canvas id="graphique_vis" class="graph"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="uv2">
+        <div class="boxs">
+            <div class="box box_graphique chart">
+                <p class="titres_graph">Évolution de l'indice UV</p>
+                <canvas id="graphique_uv" class="graph"></canvas>
+            </div>
+        </div>
+    </section>
 </div>
-<section id="tout">
-    <div class="conteneur-dashboard">
-
-        <a href="#vent2">
-            <div class="item carte-dashboard">
-                <h2>Vitesse du Vent</h2>
-                <p id="vent"></p>
-            </div>
-        </a>
-
-        <a href="#pluie2">
-            <div class="item carte-dashboard">
-                <h2>Pluviométrie</h2>
-                <p id="pluie"></p>
-            </div>
-        </a>
-
-        <a href="#temp2">
-            <div class="item carte-dashboard">
-                <h2>Thermomètre</h2>
-                <p id="termo"></p>
-            </div>
-        </a>
-
-        <a href="#vent2">
-            <div class="item carte-dashboard">
-                <h2>Sens du vent</h2>
-                <p id="ind_vent"></p>
-            </div>
-        </a>
-
-        <a href="#vis2">
-            <div class="item carte-dashboard">
-                <h2>Lumière visible</h2>
-                <p id="vis"></p>
-            </div>
-        </a>
-
-        <a href="#uv2">
-            <div class="item carte-dashboard">
-                <h2>Indice UV</h2>
-                <p id="uv"></p>
-            </div>
-        </a>
-    </div>
-</section>
-<section id="vent2">
-    <div class="conteneur-dashboard">
-        <div class="item big-card chart">
-            <h2>Évolution du Vent</h2>
-            <canvas id="graphique_vent" width="500px" height="250px"></canvas>
-        </div>
-    </div>
-</section>
-<section id="pluie2">
-    <div class="conteneur-dashboard">
-        <div class="item big-card chart">
-            <h2>Évolution de la Précipitation</h2>
-            <canvas id="graphique_pluie" width="500px" height="250px"></canvas>
-        </div>
-    </div>
-</section>
-<section id="temp2">
-    <div class="conteneur-dashboard">
-        <div class="item big-card chart">
-            <h2>Évolution de la Température</h2>
-            <canvas id="graphique_temp" width="500px" height="250px"></canvas>
-        </div>
-    </div>
-</section>
-<section id="uv2">
-    <div class="conteneur-dashboard">
-        <div class="item big-card chart">
-            <h2>Évolution de l'indice uv</h2>
-            <canvas id="graphique_uv" width="500px" height="250px"></canvas>
-        </div>
-    </div>
-</section>
-<section id="vis2">
-    <div class="conteneur-dashboard">
-        <div class="item big-card chart">
-            <h2>Évolution de la lumière visible</h2>
-            <canvas id="graphique_vis" width="500px" height="250px"></canvas>
-        </div>
-    </div>
-</section>
 <script>
     let redirectionEffectuee = false;
     if (!redirectionEffectuee) {
-        window.location.href = "index.html#tout";
+        window.location.href = "index.html#home";
         redirectionEffectuee = true;
     }
 </script>
 <script src="js/graphique.js"></script>
-<script src="js/dashboard.js"></script>
 </body>
 </html>
