@@ -106,7 +106,7 @@ Installez les bibliothèques Python nécessaires :
 ## 🔗 Annexe
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <img src="https://i.ibb.co/pybJnkN/Capture-d-cran-2024-02-07-234722.png" alt="Site Screenshot" style="width: 49%; margin-bottom: 10px; margin-left: 10px;">
+  <img src="https://i.ibb.co/gVmz6cQ/Capture-d-cran-2024-02-07-234722.png" alt="Site Screenshot" style="width: 49%; margin-bottom: 10px; margin-left: 10px;">
   <img src="https://i.ibb.co/CwCkt7r/Capture-d-cran-2024-02-07-234641.png" alt="Site Screenshot" style="width: 49%; margin-bottom: 10px;margin-left: 10px;">
   <img src="https://via.placeholder.com/468x300?text=Station" alt="Station Screenshot" style="width: 45%; margin-bottom: 10px;margin-left: 10px;">
   <img src="https://via.placeholder.com/468x300?text=Raspberry" alt="Raspberry Screenshot" style="width: 45%; margin-bottom: 10px;margin-left: 10px;">
